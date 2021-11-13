@@ -6,22 +6,14 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import MyBookings from '../MyBookings/MyBookings';
 import {
-    BrowserRouter as Router,
+
     Switch,
     Route,
     Link,
-    useParams,
     useRouteMatch
 } from "react-router-dom";
 import { Button } from '@mui/material';
@@ -34,6 +26,7 @@ import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import ManageReview from '../../Home/Reviews/ManageReview/ManageReview';
 import ManageCar from '../../../ManageCar/ManageCar/ManageCar';
 import AllBookings from '../AllBookings/AllBookings';
+import Pay from '../Pay/Pay';
 
 const drawerWidth = 180;
 
@@ -52,8 +45,13 @@ function Dashboard(props) {
             <Toolbar />
             <Divider />
             <Link to="/home" style={{ textDecoration: 'none', color: 'black' }}> <Button color='inherit'>Home</Button> </Link><br />
+
+            <Link to={`${url}/pay`} style={{ textDecoration: 'none', color: 'black' }}> <Button color='inherit'>Pay</Button> </Link><br />
+
             <Link to={`${url}`} style={{ textDecoration: 'none', color: 'black' }}> <Button color='inherit'>My Orders</Button> </Link><br />
+
             <Link to={`${url}/addReview`} style={{ textDecoration: 'none', color: 'black' }}> <Button color='inherit'>Add Review</Button> </Link>
+
             {
                 admin && <Box>
                     <Link to={`${url}/makeAdmin`} style={{ textDecoration: 'none', color: 'black' }}> <Button color='inherit'>Make Admin</Button> </Link><br />
@@ -140,6 +138,9 @@ function Dashboard(props) {
                 <Switch>
                     <Route exact path={path}>
                         <DashboardHome></DashboardHome>
+                    </Route>
+                    <Route path={`${path}/pay`}>
+                        <Pay></Pay>
                     </Route>
                     <Route path={`${path}/addReview`}>
                         <AddReview></AddReview>

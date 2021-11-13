@@ -9,7 +9,7 @@ import './DisplayReview.css';
 const DisplayReview = () => {
     const [review, setReview] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://serene-peak-88325.herokuapp.com/reviews')
             .then(res => res.json())
             .then(data => setReview(data));
     }, [])

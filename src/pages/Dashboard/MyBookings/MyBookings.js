@@ -13,7 +13,7 @@ const MyBookings = () => {
     const { user } = useAuth();
     const [myBookings, setMyBookings] = useState([]);
     useEffect(() => {
-        const url = `http://localhost:5000/bookingCar?email=${user.email}`;
+        const url = `https://serene-peak-88325.herokuapp.com/bookingCar?email=${user.email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setMyBookings(data))
@@ -23,7 +23,7 @@ const MyBookings = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/bookingCar/${id}`
+            const url = `https://serene-peak-88325.herokuapp.com/bookingCar/${id}`
             fetch(url, {
                 method: "DELETE"
             })

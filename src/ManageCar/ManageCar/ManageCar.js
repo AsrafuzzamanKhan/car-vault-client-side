@@ -12,7 +12,7 @@ import Paper from '@mui/material/Paper';
 const ManageCar = () => {
     const [cars, setCars] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/allCars')
+        fetch('https://serene-peak-88325.herokuapp.com/allCars')
             .then(res => res.json())
             .then(data => setCars(data))
     }, [])
@@ -20,7 +20,7 @@ const ManageCar = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/allCars/${id}`
+            const url = `https://serene-peak-88325.herokuapp.com/allCars/${id}`
             fetch(url, {
                 method: "DELETE"
             })

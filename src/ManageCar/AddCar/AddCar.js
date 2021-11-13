@@ -9,7 +9,7 @@ const AddCar = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
 
-        axios.post('http://localhost:5000/addCar', data)
+        axios.post('https://serene-peak-88325.herokuapp.com/addCar', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Successfully Added');
@@ -23,7 +23,7 @@ const AddCar = () => {
 
     return (
         <Container sx={{ p: 5 }}>
-            <Typography className='heading' variant="h5" gutterBottom>
+            <Typography className='add-car' variant="h5" gutterBottom>
                 Add A New Car
             </Typography>
             <Box className="addCar" >

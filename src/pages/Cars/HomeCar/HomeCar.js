@@ -6,7 +6,7 @@ import HomeCarDisplay from '../HomeCarDisplay/HomeCarDisplay';
 const HomeCar = () => {
     const [cars, setCars] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/homeCars')
+        fetch('https://serene-peak-88325.herokuapp.com/homeCars')
             .then(res => res.json())
             .then(data => setCars(data))
     }, [])

@@ -4,17 +4,6 @@ import React from 'react';
 import bg from '../../../images/banner/banner.jpg'
 import './Banner.css'
 
-
-// const bannerBg = {
-//     background: `url(${bg})`,
-//     width: '100%',
-//     height: '100%',
-//     backgroundRepeat: "no-repeat",
-//     backgroundPosition: "right top",
-//     backgroundAttachment: "fixed"
-
-
-// }
 const Banner = () => {
     return (
         <Box >

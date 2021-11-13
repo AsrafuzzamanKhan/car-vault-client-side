@@ -11,7 +11,7 @@ const AddReview = () => {
     const { user } = useAuth()
     const onSubmit = data => {
 
-        axios.post('http://localhost:5000/addReview', data)
+        axios.post('https://serene-peak-88325.herokuapp.com/addReview', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Successfully Added');

@@ -16,7 +16,7 @@ const Booking = () => {
     const [bookingCar, setBookingCar] = useState({})
     const [bookingDone, setBookingDone] = useState(false)
     useEffect(() => {
-        fetch(`http://localhost:5000/allCars/${id}`)
+        fetch(`https://serene-peak-88325.herokuapp.com/allCars/${id}`)
             .then(res => res.json())
             .then(data => setBookingCar(data))
     }, [id]);
@@ -36,15 +36,17 @@ const Booking = () => {
     }
 
     const handleBookingSubmit = e => {
+
         e.preventDefault();
         const booking = {
             ...bookingInfo,
             bookingCarName: bookingCar.name,
+            bookingStatus: 'pending'
 
         }
         // send to server 
 
-        fetch('http://localhost:5000/bookingCar', {
+        fetch('https://serene-peak-88325.herokuapp.com/bookingCar', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -64,9 +66,7 @@ const Booking = () => {
                 }
             })
 
-
     }
-
     return (
         <Box>
             <Navigation></Navigation>
@@ -122,6 +122,7 @@ const Booking = () => {
                             sx={{ width: '50%', m: 1 }}
                             id="outlined-size-small"
                             name="phone"
+                            type="number"
                             onBlur={handleOnBlue}
                             placeholder="Phone"
                             size="small"

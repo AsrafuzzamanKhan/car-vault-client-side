@@ -13,7 +13,7 @@ const MakeAdmin = () => {
     }
     const handleAdminSubmit = e => {
         const user = { email };
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://serene-peak-88325.herokuapp.com/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -23,8 +23,8 @@ const MakeAdmin = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount) {
-                    setEmail('')
-                    setSuccess(true)
+                    setEmail('');
+                    setSuccess(true);
                 }
             })
         e.preventDefault()
