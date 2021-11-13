@@ -1,0 +1,13 @@
+.middle{
+    background-color: ghostwhite;
+}
+.middle-img{
+    width: 70%;
+    text-align: center;
+}
+.side-bar{
+    display: flex;
+    align-items: center;
+   padding: 15px;
+ 
+}

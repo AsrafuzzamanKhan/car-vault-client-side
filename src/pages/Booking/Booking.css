@@ -1,0 +1,20 @@
+.heading{
+    text-align: center;
+}
+.booking{
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 30px;
+}
+.booking form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    }
+    .booking form input,textarea{
+        /* width: 40%; */
+        margin-bottom: 10px;
+        padding: 10px;
+    }
