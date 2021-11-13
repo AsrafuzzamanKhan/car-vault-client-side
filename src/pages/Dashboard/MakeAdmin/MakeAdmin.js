@@ -35,7 +35,7 @@ const MakeAdmin = () => {
             <form onSubmit={handleAdminSubmit}>
                 <TextField
                     sx={{ width: '50%', m: 1 }}
-                    label="Standard"
+                    label="Email"
                     type="email"
                     onBlur={handleOnBlur}
                     variant="standard" />
