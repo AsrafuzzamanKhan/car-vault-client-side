@@ -1,8 +1,19 @@
 .card{
-    /* height: 480px; */
+    transition: .9s;
+    position: relative;
+}
+.card:hover{
+   
+    box-shadow: 8px 5px 16px gray;
 }
 .buttonDesign{
-
-text-align: end;
-margin: 10px;
+    margin: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
+.buttonDesign:hover{
+    background-color: cadetblue;
+    border-radius: 5px;
+}
+

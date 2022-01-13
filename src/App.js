@@ -6,13 +6,11 @@ import {
 } from "react-router-dom";
 import Home from './pages/Home/Home/Home';
 import Booking from './pages/Booking/Booking';
-import AddCar from './ManageCar/AddCar/AddCar';
 import AllCars from './pages/Cars/AllCars/AllCars';
 import Login from './pages/Login/Login/Login';
 import Register from './pages/Login/Register/Register';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
-import AddReview from './pages/Home/Reviews/AddReview/AddReview';
 import ManageCar from './ManageCar/ManageCar/ManageCar';
 import ManageReview from './pages/Home/Reviews/ManageReview/ManageReview';
 import Dashboard from './pages/Dashboard/Dashboard/Dashboard';

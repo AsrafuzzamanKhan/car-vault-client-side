@@ -15,7 +15,7 @@ const Car = ({ car }) => {
     return (
 
         <Grid item xs={12} md={4}>
-            <Card className="card" sx={{ maxWidth: 345, height: 1 }}>
+            <Card className="card" sx={{ maxWidth: 345, height: 1 }} >
                 <CardActionArea>
                     <CardMedia
                         component="img"
@@ -30,7 +30,7 @@ const Car = ({ car }) => {
                         <Typography variant="h6" color="text.secondary">
                             {price}$
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography sx={{ my: 5 }} variant="body2" color="text.secondary">
                             {description}
                         </Typography>
 
@@ -42,7 +42,7 @@ const Car = ({ car }) => {
 
                 </Box>
             </Card>
-        </Grid>
+        </Grid >
     );
 };
 export default Car;
