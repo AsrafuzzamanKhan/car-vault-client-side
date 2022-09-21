@@ -1,0 +1,42 @@
+.navigation-container {
+  position: relative;
+  height: calc(75px - 20px);
+}
+.navigation {
+  position: sticky;
+  top: 0;
+  background-color: #232f3e !important;
+  color: black;
+  padding: 0 8% !important;
+}
+.navigation a {
+  font-size: 18px;
+  color: white;
+  margin: 0 25px;
+}
+.navigation a:hover {
+  padding: 10px;
+  background-color: gray;
+  border-radius: 5px;
+  color: orange;
+}
+.navigation a button {
+  font-size: 18px;
+  color: white;
+  line-height: 10px;
+}
+/* .navigation a button:hover {
+  background-color: gray;
+} */
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: black; */
+}
+.logBtn {
+  color: white;
+}
+.logBtn:hover {
+  background-color: gray;
+}

@@ -25,7 +25,7 @@ const HomeCarDisplay = ({ car }) => {
                         <Typography variant="h6" color="text.secondary">
                             {price}$
                         </Typography>
-                        <Typography sx={{ my: 5 }} variant="body2" color="text.secondary">
+                        <Typography sx={{ mb: 5 }} variant="body2" color="text.secondary">
                             {description}
                         </Typography>
 

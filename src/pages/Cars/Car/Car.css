@@ -1,19 +1,17 @@
-.card{
-    transition: .9s;
-    position: relative;
+.card {
+  transition: 0.9s;
+  position: relative;
 }
-.card:hover{
-   
-    box-shadow: 8px 5px 16px gray;
+.card:hover {
+  box-shadow: 8px 5px 16px gray;
 }
-.buttonDesign{
-    margin: 10px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+.buttonDesign {
+  margin: 10px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
-.buttonDesign:hover{
-    background-color: cadetblue;
-    border-radius: 5px;
+.buttonDesign:hover {
+  background-color: rgb(25, 93, 95);
+  border-radius: 5px;
 }
-
