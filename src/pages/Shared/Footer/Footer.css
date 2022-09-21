@@ -1,11 +1,22 @@
-.footer{
-    background-color: #232f3e;
-    margin-top: 20px;
-    padding: 40px;
+h6 {
+  color: orange;
+}
+.footer {
+  background-color: #131a22;
+  margin-top: 20px;
+  padding: 2% 8%;
 }
 
-.footer-part{
-    color: white;
-    font-weight: 400;
- 
+.footer-part {
+  color: white;
+  font-weight: 400;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.foot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }

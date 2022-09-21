@@ -5,8 +5,7 @@
 .navigation {
   position: sticky;
   top: 0;
-  background-color: #232f3e !important;
-  color: black;
+  background-color: #131a22 !important;
   padding: 0 8% !important;
 }
 .navigation a {
@@ -38,5 +37,8 @@
   color: white;
 }
 .logBtn:hover {
-  background-color: gray;
+  font-size: 18px;
+
+  background-color: gray !important;
+  color: orange !important;
 }

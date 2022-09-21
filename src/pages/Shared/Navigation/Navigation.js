@@ -128,16 +128,6 @@ export default function Navigation() {
     <Box className="navigation-container" sx={{ flexGrow: 1 }}>
       <AppBar>
         <Toolbar className="navigation">
-          {/* <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="open drawer"
-                        sx={{ mr: 2 }}
-                    >
-                        <MenuIcon />
-                    </IconButton> */}
-
           <Typography
             variant="h4"
             noWrap
