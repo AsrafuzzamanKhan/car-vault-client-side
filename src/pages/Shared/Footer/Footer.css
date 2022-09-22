@@ -1,10 +1,12 @@
-h6 {
+.footer-part h6 {
   color: orange;
+  margin-bottom: 8%;
+  font-weight: 600;
 }
 .footer {
   background-color: #131a22;
-  margin-top: 20px;
-  padding: 2% 8%;
+  margin-top: 40px;
+  padding: 3% 10% 1%;
 }
 
 .footer-part {
