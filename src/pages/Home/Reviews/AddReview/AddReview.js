@@ -11,7 +11,7 @@ const AddReview = () => {
   const { user } = useAuth();
   const onSubmit = (data) => {
     axios
-      .post('https://serene-peak-88325.herokuapp.com/addReview', data)
+      .post('https://car-vault-server-site.vercel.app/addReview', data)
       .then((res) => {
         if (res.data.insertedId) {
           alert('Successfully Added');
