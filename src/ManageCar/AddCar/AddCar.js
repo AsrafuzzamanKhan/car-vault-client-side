@@ -9,7 +9,10 @@ const AddCar = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     axios
-      .post('https://car-vault-server-site.vercel.app/addCar', data)
+      .post(
+        'https://car-vault-server-site-production.up.railway.app/addCar',
+        data
+      )
       .then((res) => {
         if (res.data.insertedId) {
           alert('Successfully Added');

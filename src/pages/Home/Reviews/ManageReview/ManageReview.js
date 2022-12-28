@@ -11,7 +11,7 @@ import Paper from '@mui/material/Paper';
 const ManageReview = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch('https://car-vault-server-site.vercel.app/reviews')
+    fetch('https://car-vault-server-site-production.up.railway.app/reviews')
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
@@ -19,7 +19,7 @@ const ManageReview = () => {
   const handleReviewDelete = (id) => {
     const proceed = window.confirm('Are you sure, you want to delete?');
     if (proceed) {
-      const url = `https://car-vault-server-site.vercel.app/reviews/${id}`;
+      const url = `https://car-vault-server-site-production.up.railway.app/reviews/${id}`;
       fetch(url, {
         method: 'DELETE',
       })

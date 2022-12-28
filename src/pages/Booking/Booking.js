@@ -16,7 +16,9 @@ const Booking = () => {
   const [bookingDone, setBookingDone] = useState(false);
   useEffect(() => {
     // fetch(`https://serene-peak-88325.herokuapp.com/allCars/${id}`)
-    fetch(`https://car-vault-server-site.vercel.app/allCars/${id}`)
+    fetch(
+      `https://car-vault-server-site-production.up.railway.app/allCars/${id}`
+    )
       .then((res) => res.json())
       .then((data) => setBookingCar(data));
   }, [id]);
@@ -49,13 +51,16 @@ const Booking = () => {
     };
     // send to server
 
-    fetch('https://car-vault-server-site.vercel.app/bookingCar', {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify(booking),
-    })
+    fetch(
+      'https://car-vault-server-site-production.up.railway.app/bookingCar',
+      {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify(booking),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         const proceed = window.confirm('Order confirm?');

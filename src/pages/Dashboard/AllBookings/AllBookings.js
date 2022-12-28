@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import useAuth from '../../../hooks/useAuth';
 import { Button, Container, Typography } from '@mui/material';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -13,7 +12,8 @@ const AllBookings = () => {
   const [allBookings, setAllBookings] = useState([]);
   // const { user } = useAuth();
   useEffect(() => {
-    const url = 'https://car-vault-server-site.vercel.app/allOrders';
+    const url =
+      'https://car-vault-server-site-production.up.railway.app/allOrders';
     fetch(url)
       .then((res) => res.json())
       .then((data) => setAllBookings(data));
@@ -32,7 +32,7 @@ const AllBookings = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm('Are you sure, you want to delete?');
     if (proceed) {
-      const url = `https://car-vault-server-site.vercel.app/bookingCar/${id}`;
+      const url = `https://car-vault-server-site-production.up.railway.app/bookingCar/${id}`;
       fetch(url, {
         method: 'DELETE',
       })

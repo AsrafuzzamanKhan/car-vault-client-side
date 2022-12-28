@@ -13,7 +13,7 @@ const MyBookings = () => {
   const { user } = useAuth();
   const [myBookings, setMyBookings] = useState([]);
   useEffect(() => {
-    const url = `https://car-vault-server-site.vercel.app/bookingCar?email=${user.email}`;
+    const url = `https://car-vault-server-site-production.up.railway.app/bookingCar?email=${user.email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setMyBookings(data));
@@ -22,7 +22,7 @@ const MyBookings = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm('Are you sure, you want to delete?');
     if (proceed) {
-      const url = `https://car-vault-server-site.vercel.app/bookingCar/${id}`;
+      const url = `https://car-vault-server-site-production.up.railway.app/bookingCar/${id}`;
       fetch(url, {
         method: 'DELETE',
       })
