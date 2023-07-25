@@ -6,7 +6,7 @@ import HomeCarDisplay from '../HomeCarDisplay/HomeCarDisplay';
 const HomeCar = () => {
   const [cars, setCars] = useState([]);
   useEffect(() => {
-    fetch('https://car-vault-server-site-production.up.railway.app/homeCars')
+    fetch('https://car-vault-server-site.vercel.app/homeCars')
       .then((res) => res.json())
       .then((data) => {
         setCars(data);

@@ -7,7 +7,7 @@ import Car from '../Car/Car';
 const Cars = () => {
   const [cars, setCars] = useState([]);
   useEffect(() => {
-    fetch('https://car-vault-server-site-production.up.railway.app/allCars')
+    fetch('https://car-vault-server-site.vercel.app/allCars')
       .then((res) => res.json())
       .then((data) => setCars(data));
   }, []);

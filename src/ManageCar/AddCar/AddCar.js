@@ -10,7 +10,7 @@ const AddCar = () => {
   const onSubmit = (data) => {
     axios
       .post(
-        'https://car-vault-server-site-production.up.railway.app/addCar',
+        'https://car-vault-server-site.vercel.app/addCar',
         data
       )
       .then((res) => {

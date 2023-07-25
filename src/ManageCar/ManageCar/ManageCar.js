@@ -11,7 +11,7 @@ import Paper from '@mui/material/Paper';
 const ManageCar = () => {
   const [cars, setCars] = useState([]);
   useEffect(() => {
-    fetch('https://car-vault-server-site-production.up.railway.app/allCars')
+    fetch('https://car-vault-server-site.vercel.app/allCars')
       // fetch('http://localhost:5000/allCars')
       .then((res) => res.json())
       .then((data) => setCars(data));
@@ -20,7 +20,7 @@ const ManageCar = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm('Are you sure, you want to delete?');
     if (proceed) {
-      const url = `https://car-vault-server-site-production.up.railway.app/allCars/${id}`;
+      const url = `https://car-vault-server-site.vercel.app/allCars/${id}`;
       fetch(url, {
         method: 'DELETE',
       })

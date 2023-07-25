@@ -9,7 +9,7 @@ import reviewIcon from '../../../../images/reviewIcon/review-icon.jpg';
 const DisplayReview = () => {
   const [review, setReview] = useState([]);
   useEffect(() => {
-    fetch('https://car-vault-server-site-production.up.railway.app/reviews')
+    fetch('https://car-vault-server-site.vercel.app/reviews')
       .then((res) => res.json())
       .then((data) => setReview(data));
   }, []);

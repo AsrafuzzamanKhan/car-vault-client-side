@@ -17,7 +17,7 @@ const Booking = () => {
   useEffect(() => {
     // fetch(`https://serene-peak-88325.herokuapp.com/allCars/${id}`)
     fetch(
-      `https://car-vault-server-site-production.up.railway.app/allCars/${id}`
+      `https://car-vault-server-site.vercel.app/allCars/${id}`
     )
       .then((res) => res.json())
       .then((data) => setBookingCar(data));
@@ -52,7 +52,7 @@ const Booking = () => {
     // send to server
 
     fetch(
-      'https://car-vault-server-site-production.up.railway.app/bookingCar',
+      'https://car-vault-server-site.vercel.app/bookingCar',
       {
         method: 'POST',
         headers: {
