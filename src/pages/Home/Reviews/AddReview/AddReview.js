@@ -12,7 +12,7 @@ const AddReview = () => {
   const onSubmit = (data) => {
     axios
       .post(
-        'https://car-vault-server-site.vercel.app/addReview',
+        'https://car-vault-server.vercel.app/addReview',
         data
       )
       .then((res) => {

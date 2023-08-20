@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Box } from '@mui/system';
 import useAuth from '../../hooks/useAuth';
-import { Button, Container, Grid, TextField, Typography } from '@mui/material';
+import { Button, Card, CardContent, CardMedia, Container, Grid, TextField, Typography } from '@mui/material';
 import './Booking.css';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
@@ -24,7 +24,7 @@ const Booking = () => {
   useEffect(() => {
     // fetch(`https://serene-peak-88325.herokuapp.com/allCars/${id}`)
     fetch(
-      `https://car-vault-server-site.vercel.app/allCars/${id}`
+      `https://car-vault-server.vercel.app/allCars/${id}`
     )
       .then((res) => res.json())
       .then((data) => setBookingCar(data));
@@ -59,7 +59,7 @@ const Booking = () => {
     // send to server
 
     fetch(
-      'https://car-vault-server-site.vercel.app/bookingCar',
+      'https://car-vault-server.vercel.app/bookingCar',
       {
         method: 'POST',
         headers: {
@@ -102,46 +102,8 @@ const Booking = () => {
           </Grid>
         </Box>
         {/* ----------------- */}
-        {/* <Card
-          variant="outlined"
-          orientation="horizontal"
-          sx={{
-            width: 320,
-            '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' },
-          }}
-        >
-          <AspectRatio ratio="1" sx={{ width: 90 }}>
-            <img
-              className="car-img" src={bookingCar.img}
-              srcSet="https://images.unsplash.com/photo-1507833423370-a126b89d394b?auto=format&fit=crop&w=90&dpr=2 2x"
-              loading="lazy"
-              alt=""
-            />
-          </AspectRatio>
-          <CardContent>
-            <Typography level="h2" fontSize="lg" id="card-description" mb={0.5}>
-              Yosemite Park
-            </Typography>
-            <Typography fontSize="sm" aria-describedby="card-description" mb={1}>
-              <Link
-                overlay
-                underline="none"
-                href="#interactive-card"
-                sx={{ color: 'text.tertiary' }}
-              >
-                California, USA
-              </Link>
-            </Typography>
-            <Chip
-              variant="outlined"
-              color="primary"
-              size="sm"
-              sx={{ pointerEvents: 'none' }}
-            >
-              Cool weather all day long
-            </Chip>
-          </CardContent>
-        </Card> */}
+
+
 
         {/* --------------------- */}
         <Box className="booking">
@@ -200,7 +162,7 @@ const Booking = () => {
         </Box>
       </Container>
       <Footer></Footer>
-    </Box>
+    </Box >
   );
 };
 

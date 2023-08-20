@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Grid, Typography } from '@mui/material';
+import { CircularProgress, Container, Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import HomeCarDisplay from '../HomeCarDisplay/HomeCarDisplay';
 
 const HomeCar = () => {
   const [cars, setCars] = useState([]);
   useEffect(() => {
-    fetch('https://car-vault-server-site.vercel.app/homeCars')
+    fetch('https://car-vault-server.vercel.app/homeCars')
       .then((res) => res.json())
       .then((data) => {
         setCars(data);
@@ -18,6 +18,7 @@ const HomeCar = () => {
       <Typography sx={{ mb: 5 }} className="heading" variant="h4">
         Our Cars
       </Typography>
+      {cars.length !== 0 ? <></> : <>Product is loading...<CircularProgress /></>}
       {cars ? (
         <Container>
           <Grid container spacing={2}>

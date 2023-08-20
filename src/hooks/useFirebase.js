@@ -83,7 +83,7 @@ const useFirebase = () => {
 
   useEffect(() => {
     fetch(
-      `https://car-vault-server-site.vercel.app/users/${user.email}`
+      `https://car-vault-server.vercel.app/users/${user.email}`
     )
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
@@ -121,7 +121,7 @@ const useFirebase = () => {
   };
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    fetch('https://car-vault-server-site.vercel.app/users', {
+    fetch('https://car-vault-server.vercel.app/users', {
       method: method,
       headers: {
         'content-type': 'application/json',

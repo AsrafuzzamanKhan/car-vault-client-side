@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from '@mui/material';
+import { CircularProgress, Container, Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useEffect, useState } from 'react';
 import Rating from '@mui/material/Rating';
@@ -9,20 +9,24 @@ import reviewIcon from '../../../../images/reviewIcon/review-icon.jpg';
 const DisplayReview = () => {
   const [review, setReview] = useState([]);
   useEffect(() => {
-    fetch('https://car-vault-server-site.vercel.app/reviews')
+    fetch('https://car-vault-server.vercel.app/reviews')
       .then((res) => res.json())
-      .then((data) => setReview(data));
-  }, []);
+      .then((data) => {
+        console.log(data)
+        setReview(data)
+      });
+  }, [review]);
   return (
     <Box>
       <Typography className="heading" variant="h4">
         Reviews
       </Typography>
 
+      {review.length !== 0 ? <></> : <><CircularProgress /></>}
       <Container>
         <Grid container spacing={4} sx={{ my: 3 }}>
           {review.map((pd) => (
-            <Grid item xs={6} md={4}>
+            <Grid item xs={6} md={4} key={pd._id}>
               <Box
                 sx={{
                   display: 'flex',
