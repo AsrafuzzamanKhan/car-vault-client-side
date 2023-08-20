@@ -8,6 +8,13 @@ import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import Navigation from '../Shared/Navigation/Navigation';
 import Footer from '../Shared/Footer/Footer';
+// import AspectRatio from '@mui/joy/AspectRatio';
+// import Link from '@mui/joy/Link';
+// import Card from '@mui/joy/Card';
+// import CardContent from '@mui/joy/CardContent';
+// import Chip from '@mui/joy/Chip';
+// import Typography from '@mui/joy/Typography';
+
 
 const Booking = () => {
   const { id } = useParams();
@@ -94,7 +101,49 @@ const Booking = () => {
             </Grid>
           </Grid>
         </Box>
+        {/* ----------------- */}
+        {/* <Card
+          variant="outlined"
+          orientation="horizontal"
+          sx={{
+            width: 320,
+            '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' },
+          }}
+        >
+          <AspectRatio ratio="1" sx={{ width: 90 }}>
+            <img
+              className="car-img" src={bookingCar.img}
+              srcSet="https://images.unsplash.com/photo-1507833423370-a126b89d394b?auto=format&fit=crop&w=90&dpr=2 2x"
+              loading="lazy"
+              alt=""
+            />
+          </AspectRatio>
+          <CardContent>
+            <Typography level="h2" fontSize="lg" id="card-description" mb={0.5}>
+              Yosemite Park
+            </Typography>
+            <Typography fontSize="sm" aria-describedby="card-description" mb={1}>
+              <Link
+                overlay
+                underline="none"
+                href="#interactive-card"
+                sx={{ color: 'text.tertiary' }}
+              >
+                California, USA
+              </Link>
+            </Typography>
+            <Chip
+              variant="outlined"
+              color="primary"
+              size="sm"
+              sx={{ pointerEvents: 'none' }}
+            >
+              Cool weather all day long
+            </Chip>
+          </CardContent>
+        </Card> */}
 
+        {/* --------------------- */}
         <Box className="booking">
           {bookingDone && (
             <Alert severity="success">

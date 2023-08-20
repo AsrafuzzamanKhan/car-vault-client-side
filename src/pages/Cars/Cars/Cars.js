@@ -1,10 +1,12 @@
-import { Container, Grid, Typography } from '@mui/material';
+import { Container, Grid, Typography, CircularProgress } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useEffect, useState } from 'react';
 
 import Car from '../Car/Car';
+import useAuth from '../../../hooks/useAuth';
 
 const Cars = () => {
+  const { isLoading } = useAuth()
   const [cars, setCars] = useState([]);
   useEffect(() => {
     fetch('https://car-vault-server-site.vercel.app/allCars')
@@ -18,6 +20,7 @@ const Cars = () => {
         <Typography sx={{ mb: 5 }} className="heading" variant="h4">
           Our Cars
         </Typography>
+        {isLoading && <CircularProgress />}
         <Container>
           <Grid container spacing={2}>
             {cars.map((car) => (

@@ -1,5 +1,8 @@
 import {
+  Box,
   Button,
+  Card,
+  CardContent,
   CircularProgress,
   Container,
   Grid,
@@ -36,26 +39,27 @@ const Register = () => {
     e.preventDefault();
   };
   return (
-    <Container>
-      <Grid container spacing={2}>
-        <Grid item xs={12} md={6}>
-          <img style={{ width: '100%' }} src={img} alt="" />
-        </Grid>
-        <Grid item sx={{ mt: 8 }} xs={12} md={6}>
-          <Typography variant="body1" gutterBottom>
+
+    <Box sx={{
+      width: '100%', height: '100vh', display: 'flex',
+      justifyContent: 'center', alignItems: 'center'
+    }}>
+      <Card sx={{ width: '30rem', p: 3, boxShadow: 3 }}>
+        <CardContent>
+          <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold', textAlign: 'center' }}>
             Register
           </Typography>
           {!isLoading && (
             <form onSubmit={handleLoginSubmit}>
               <TextField
-                sx={{ width: '75%', m: 1 }}
+                sx={{ width: '100%', m: 1 }}
                 label="Your Name"
                 name="name"
                 onBlur={handleOnBlur}
                 variant="standard"
               />
               <TextField
-                sx={{ width: '75%', m: 1 }}
+                sx={{ width: '100%', m: 1 }}
                 label="Your Email"
                 name="email"
                 type="email"
@@ -63,7 +67,7 @@ const Register = () => {
                 variant="standard"
               />
               <TextField
-                sx={{ width: '75%', m: 1 }}
+                sx={{ width: '100%', m: 1 }}
                 label="Your Password"
                 type="password"
                 name="password"
@@ -71,7 +75,7 @@ const Register = () => {
                 variant="standard"
               />
               <TextField
-                sx={{ width: '75%', m: 1 }}
+                sx={{ width: '100%', m: 1 }}
                 label="Re-enter Password"
                 type="password"
                 name="password2"
@@ -81,8 +85,9 @@ const Register = () => {
 
               <Button
                 type="submit"
-                sx={{ width: '75%', m: 1 }}
+                sx={{ width: '100%', m: 1, mt: 2, fontWeight: 'bold', letterSpacing: 1 }}
                 variant="contained"
+
               >
                 Register
               </Button>
@@ -97,9 +102,10 @@ const Register = () => {
             <Alert severity="success">Successfully register!</Alert>
           )}
           {error && <Alert severity="error">{error}</Alert>}
-        </Grid>
-      </Grid>
-    </Container>
+        </CardContent>
+
+      </Card>
+    </Box >
   );
 };
 

@@ -138,7 +138,7 @@ const Footer = () => {
 
       <Typography variant="div">
         <small className="foot">
-          Copyright © 2021 Car-vault. All rights reserved by MD. Asrafuzzaman
+          Copyright © 2023 Car-vault. All rights reserved by MD. Asrafuzzaman
           Khan
         </small>
       </Typography>

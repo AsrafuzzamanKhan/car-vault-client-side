@@ -1,5 +1,6 @@
 import {
   Alert,
+  Box,
   Button,
   CircularProgress,
   Container,
@@ -11,6 +12,10 @@ import img from '../../../images/login/login.jpg';
 import TextField from '@mui/material/TextField';
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import { Padding } from '@mui/icons-material';
 
 const Login = () => {
   const [loginData, setLoginData] = useState({});
@@ -35,18 +40,19 @@ const Login = () => {
     signInWithGoogle(location, history);
   };
   return (
-    <Container>
-      <Grid container spacing={2}>
-        <Grid item xs={12} md={6}>
-          <img style={{ width: '100%' }} src={img} alt="" />
-        </Grid>
-        <Grid item sx={{ mt: 8 }} xs={12} md={6}>
-          <Typography variant="body1" gutterBottom>
+
+    <Box sx={{
+      width: '100%', height: '100vh', display: 'flex',
+      justifyContent: 'center', alignItems: 'center'
+    }}>
+      <Card sx={{ width: '30rem', p: 3, boxShadow: 3 }}>
+        <CardContent>
+          <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold', textAlign: 'center' }}>
             Login
           </Typography>
           <form onSubmit={handleLoginSubmit}>
             <TextField
-              sx={{ width: '75%', m: 1 }}
+              sx={{ width: '100%', mb: 1 }}
               id="standard-basic"
               label="Your Email"
               name="email"
@@ -54,7 +60,7 @@ const Login = () => {
               variant="standard"
             />
             <TextField
-              sx={{ width: '75%', m: 1 }}
+              sx={{ width: '100%', mb: 1 }}
               id="standard-basic"
               label="Your Password"
               type="password"
@@ -65,7 +71,7 @@ const Login = () => {
 
             <Button
               type="submit"
-              sx={{ width: '75%', m: 1 }}
+              sx={{ width: '100%', mt: 2, bgcolor: 'success.main', fontWeight: 'bold', letterSpacing: 1 }}
               variant="contained"
             >
               Login
@@ -86,14 +92,17 @@ const Login = () => {
           </form>
           <Button
             onClick={handleGoogleSignIn}
-            sx={{ width: '75%', m: 1 }}
+            sx={{ width: '100%', mt: 1, bgcolor: 'text.disabled', fontWeight: 'bold', letterSpacing: 1 }}
             variant="contained"
           >
             Google sign in
           </Button>
-        </Grid>
-      </Grid>
-    </Container>
+        </CardContent>
+
+      </Card>
+    </Box >
+
+
   );
 };
 

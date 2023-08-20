@@ -12,7 +12,7 @@ const ManageCar = () => {
   const [cars, setCars] = useState([]);
   useEffect(() => {
     fetch('https://car-vault-server-site.vercel.app/allCars')
-      // fetch('http://localhost:5000/allCars')
+      // fetch('https://car-vault-server-site.vercel.app/allCars')
       .then((res) => res.json())
       .then((data) => setCars(data));
   }, []);
